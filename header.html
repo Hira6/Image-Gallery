@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header file</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="header_style.css">
+    <style>
+         /* header.css */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px #000;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#chk1 {
+    display: none;
+}
+
+header .logo {
+    flex: 1;
+    color: white;
+    margin-left: 50px;
+    font-size: 15px;
+}
+
+header .search-box {
+    flex: 1;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: #f2f2f2;
+    border-radius: 30px;
+    color: gray;
+    font-size: 16px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 40px;
+}
+
+.search-box button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(0.9);
+    background: skyblue;
+}
+
+header ul {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    transition: right 0.5s linear;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 15px;
+}
+
+header ul li a:hover {
+    border-bottom: 2px solid skyblue;
+}
+
+header .menu {
+    font-size: 2.5em;
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    header ul {
+        position: fixed;
+        top: 100px;
+        right: -100%;
+        background: rgba(0, 0, 0, 0.5);
+        height: calc(100vh - 100px);
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul li {
+        margin: 20px 0;
+    }
+
+    #chk1:checked ~ ul {
+        right: 0;
+    }
+
+    header .menu {
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    header .logo {
+        font-size: 10px;
+        margin-left: 8px;
+    }
+
+    header ul {
+        width: 100%;
+    }
+
+    header ul li {
+        margin: 15px 0;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+    <input type="checkbox" name="" id="chk1">
+    <div class="logo">
+        <h1>Click Clique</h1>
+    </div>
+    <div class="search-box">
+        <form action="">
+            <input type="text" name="search" id="srch" placeholder="Search">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #1e1e1f;"></i></button>
+        </form>
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+            <a href="#"><i class="fa-brands fa-facebook" style="color: white;"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter" style="color:white;"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram" style="color:white;"></i></a>
+        </li>
+    </ul>
+    <div class="menu">
+        <label for="chk1">
+            <i class="fa-solid fa-bars" style="color:white;"></i>
+        </label>
+    </div>
+</header>
+
+</body>
+</html>

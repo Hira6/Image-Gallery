@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+ <header>
+    <input type="checkbox" name="" id="chk1">
+    <div class="logo">
+        <h1>Click Clique</h1>
+    </div>
+    <div class="search-box">
+        <form action="">
+            <input type="text" name="search" id="srch" placeholder="Search">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #1e1e1f;"></i></button>
+        </form>
+    </div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#"><i class="fa-brands fa-facebook" style="color: white;"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter" style="color:white;"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram" style="color:white;"></i></a>
+        </li>
+    </ul>
+    <div class="menu">
+        <label for="chk1">
+            <i class="fa-solid fa-bars" style="color:white;"></i>
+        </label>
+    </div>
+ </header>
+ <h1 class="center-heading">Welcome to <span id="element"></span></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span></h1>
+
+ <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+ <script>
+ var typed = new Typed('#element', {
+    strings: ['Click Clique'],
+    typeSpeed: 70,
+    backSpeed: 70,
+    loop: true,
+});
+</script>
+<style data-typed-js-cursor-css="true">
+    .typed-cursor{
+      opacity: 1;
+    }
+    .typed-cursor.typed-cursor--blink{
+      animation: typedjsBlink 0.7s infinite;
+      -webkit-animation: typedjsBlink 0.7s infinite;
+              animation: typedjsBlink 0.7s infinite;
+    }
+    @keyframes typedjsBlink{
+      50% { opacity: 0.0; }
+    }
+    @-webkit-keyframes typedjsBlink{
+      0% { opacity: 1; }
+      50% { opacity: 0.0; }
+      100% { opacity: 1; }
+    }
+    #element {
+    margin-left: 10px; /* Adjust this value to increase or decrease the space */
+}
+  </style>
+</body>
+</html>
