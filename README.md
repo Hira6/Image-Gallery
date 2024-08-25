@@ -15,7 +15,7 @@ Font Awesome: Implementing icons to enhance the visual appeal of the navigation 
 GitHub Pages: Hosting the project online for easy access and sharing.
 🔗 Live Demo
 Check out the live demo of Click Clique here.
-
+https://imggallery12.netlify.app/
 📂 **Folder Structure**
  click-clique/
 │
